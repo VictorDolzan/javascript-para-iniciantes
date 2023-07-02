@@ -109,11 +109,11 @@ body {
     background: #faf6ed;
 }
 
-.amimais-descricao {
+.animais-descricao {
     grid-column: 3;
 }
 
-.amimais-descricao section {
+.animais-descricao section {
     margin-bottom: 3rem;
 }
 
