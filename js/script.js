@@ -1,7 +1,8 @@
-import initSmoothScroll from "./modules/scroll-suave";
-import animaScroll from "./modules/scroll-animacao";
-import initTabNav from "./modules/init-tab-nav";
-import initAccordion from "./modules/init-accordion";
+import initSmoothScroll from './modules/scroll-suave.js';
+import animaScroll from './modules/scroll-animacao.js';
+import initTabNav from './modules/init-tab-nav.js';
+import initAccordion from './modules/init-accordion.js';
+debugger
 
 initSmoothScroll();
 animaScroll();
