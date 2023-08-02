@@ -1,6 +1,6 @@
 function initTabNav() {
-    const tabMenu = document.querySelectorAll('.js-tabmenu li');
-    const tabContent = document.querySelectorAll('.js-tabcontent section');
+    const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+    const tabContent = document.querySelectorAll('[data-tab="content"] section');
     tabContent[0].classList.add('ativo');
 
     if (tabMenu.length && tabContent.length) {
@@ -8,7 +8,8 @@ function initTabNav() {
             tabContent.forEach((section) => {
                 section.classList.remove('ativo');
             })
-            tabContent[index].classList.add('ativo');
+            const direcao = tabContent[index].dataset.anime;
+            tabContent[index].classList.add('ativo', direcao);
         }
 
         tabMenu.forEach((itemMenu, index) => {
@@ -20,7 +21,7 @@ function initTabNav() {
 }
 
 function initAccordion() {
-    const accordionList = document.querySelectorAll('.js-accordion dt');
+    const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
     const activeAccordionClass = 'ativo';
     if (accordionList.length) {
         accordionList[0].classList.add(activeAccordionClass);
@@ -39,7 +40,7 @@ function initAccordion() {
 
 function initSmoothScroll() {
 
-    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+    const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
     linksInternos.forEach((item) => {
         item.addEventListener('click', (event) => {
             event.preventDefault();
@@ -61,7 +62,7 @@ function initSmoothScroll() {
 }
 
 function animaScroll() {
-    const sections = document.querySelectorAll('.js-scroll');
+    const sections = document.querySelectorAll('[data-anime="scroll"]');
     if (sections.length) {
         const windowMetade = window.innerHeight * 0.6;
         function initScroll() {
@@ -71,7 +72,7 @@ function animaScroll() {
                 if (isSectionVisible) {
                     section.classList.add('ativo');
                 }
-            })
+            });
         }
         initScroll();
         window.addEventListener('scroll', initScroll);
