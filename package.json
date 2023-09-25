@@ -1,0 +1,25 @@
+{
+  "name": "javascript-para-iniciantes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production js/script.js --output ./main.js",
+    "dev": "webpack --mode development --watch js/script.js --output ./main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorDolzan/javascript-para-iniciantes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorDolzan/javascript-para-iniciantes/issues"
+  },
+  "homepage": "https://github.com/VictorDolzan/javascript-para-iniciantes#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1"
+  }
+}
