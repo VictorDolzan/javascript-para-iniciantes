@@ -2,10 +2,11 @@
   "name": "javascript-para-iniciantes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "build": "webpack --mode production js/script.js --output ./main.js",
-    "dev": "webpack --mode development --watch js/script.js --output ./main.js"
+    "dev": "webpack --mode development --watch js/script.js --output ./main.js",
+    "start": "node js/script.js"
   },
   "repository": {
     "type": "git",
